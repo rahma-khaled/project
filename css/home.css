@@ -1,0 +1,498 @@
+*{
+   padding:0;
+   margin:0;
+   box-sizing:border-box;
+   font-family: "Montserrat Alternates", sans-serif;
+   text-transform: capitalize;
+}
+
+body{
+   perspective: 700px;
+}
+
+.container {
+   width: 80%;
+   margin: auto;
+}
+.list-unstyled {
+   list-style: none;
+}
+
+.list-unstyled i{
+   font-size: 20px;
+}
+
+a {
+   text-decoration: none;
+}
+
+/* HEADER................................................................................................... */
+header {
+   padding: 17px 0;
+}
+.header-content{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+.name-site{
+   font-family: "Pacifico", cursive;
+   font-size: 40px;
+   float: left;
+   padding-right: 28px;
+}
+
+.name-site span{
+   color: rgb(138, 183, 108);
+}
+.header-content nav{
+text-align: center;
+}
+.header-content  .login{
+text-align: right;
+}
+.header-content ul li {
+   display: inline-block;
+}
+.header-content ul li a , .header-content ul li a{
+   color:  rgb(138, 183, 108);
+}
+.header-content nav ul li .link-item {
+   position: relative;
+   padding: 12px;
+   display: block;
+   font-weight: bold;
+   position: relative;
+}
+.header-content nav ul li .link-item:before,
+.header-content nav ul li .link-item:after{
+content:"";
+position: absolute;
+border-style: solid; 
+left: 0;
+top:0; 
+transition: transform 0.2s;
+}
+.header-content nav ul li .link-item:before{
+   border-width: 0 2px;
+   height: 100%; 
+   width: 95%;
+   transform: scale3d(1,0,1);
+}
+.header-content nav ul li .link-item:hover:before{
+transform: scale3d(1,1,1);
+}
+.header-content nav ul li .link-item:after{
+border-width: 2px 0;
+height: 91%; 
+width: 98%;
+transform: scale3d(0,1,1);
+transform-origin: left;
+}
+.header-content nav ul li .link-item:hover:after{
+transform: scale3d(1,1,1);
+transition-delay: .2s;
+}
+.header-content .login ul li  {
+   padding: 10px ;
+   font-weight: bold;
+}
+.header-content .login ul li:last-child i {
+position: relative;
+margin-right: 11px;
+}
+.header-content .login ul li:last-child i::after{
+   position: absolute;
+   content: "0";
+   background-color: var(--maincolor);
+   color: #fff;
+   border-radius: 50%;
+   padding: 4px;
+   font-size: 13px;
+   bottom: -4px;
+}
+/* DROPDOWN.................................................................................................... */
+.dropdown{
+position: relative;
+}
+.dropdown-menu{
+   position: absolute;
+   width: 450px;
+   border: 2px solid rgb(138, 183, 108);
+   background-color: #fff;
+   padding: 15px;
+   margin-top: 5px;
+   transform: scale(0);
+   transition-delay: 0.3s;
+   opacity: 0;
+   visibility: hidden;
+   z-index: 10;
+}
+.dropdown:hover .dropdown-menu{
+   transform: scale(1);
+   visibility: visible;
+   opacity: 1;
+}
+.dropdown-menu ul{
+   display: table-cell;
+   text-align: left;
+}
+.dropdown-menu ul li:first-child a {
+   display: block;
+   border-bottom: 1px dotted var(--maincolor);
+   margin-bottom: 10px;
+}
+.dropdown-menu ul li {
+   line-height: 1.7;
+}
+
+.sec-img{
+   width: 80%;
+   position: relative;
+   margin: auto
+}
+
+.sec-img img{
+   width: 100%;
+   height: 480px;
+   border-radius: 10px
+}
+
+.btn{
+   position: absolute;
+   top: 82%;
+   left: 10%;
+   border: none;
+   width: 120px;
+   height: 40px;
+   background-color: rgb(138, 183, 108);
+   border-radius: 10px;
+   color: white;
+   font-size: 18px;
+   transition:1s
+}
+
+.btn:hover{
+   scale:1.2;
+   background-color: rgb(108, 178, 61);
+}
+
+.sec2{
+   width:100%;
+}
+
+.head-sec2{
+   text-align: center;
+   font-size: 28px;
+   margin-bottom: 30px;
+}
+
+.title-sec2 span,.head span{
+   color: rgb(138, 183, 108);
+   font-size: 35px;
+}
+
+.head-sec2 .line,.head-sec3 .line{
+   width: 80px;
+   height: 2px;
+   background-color: rgb(138, 183, 108);
+   margin: auto;
+   transition: 1s;
+}
+
+.head-sec2:hover .line,
+.head-sec3:hover .line{
+   width: 150px;
+}
+
+.parent-sec2{
+   display:flex;
+   flex-flow:row wrap;
+   justify-content: center;
+   gap: 15px;
+}
+
+.parent-sec2 div{
+   width: 20%;
+   height: 300px;
+}
+
+.item .img{
+   width: 100%;
+   height: 200px;
+}
+
+.item .img img{
+   width: 100%;
+   height: 100%;
+}
+
+h4{
+   color: rgb(138, 183, 108);
+   margin-top: 30px;
+}
+
+h3{
+   display: inline;
+}
+
+.item i{
+   background: rgb(138, 183, 108);
+   color: #000;
+   font-size: 22px;
+   visibility: hidden;
+   border-radius:100% ;
+}
+
+.item:hover i{
+   visibility: visible;
+}
+
+.item5{
+   flex-basis: 40%;
+   position: relative;
+   background-color: rgb(228, 255, 211);
+   padding: 20px;
+   border-radius: 10px;
+}
+
+.item5 .qoute{
+   width: 100%;
+   height: 100px;
+}
+
+
+.item5 .qoute i{
+   color: rgb(138, 183, 108);
+   font-size: 55px;
+   padding: 5px;
+}
+
+.item5 .qoute h2{
+   display: inline;
+   position: absolute;
+   top: 40px;
+}
+
+
+.item5 .qoute p{
+   position: absolute;
+   left: 80px;
+   top: 65px;
+}
+
+.item5 .lines{
+   width: 100%;
+   height: 35px;
+   position:absolute ;
+   bottom: 0;
+   left: 0;
+   display: flex;
+   justify-content: flex-end;
+}
+
+.item5 .lines span{
+   display: inline-block;
+   width: 50px;
+   height: 2px;
+   background-color: rgb(134, 183, 101);
+   margin: 7px;
+}
+
+.item6{
+   background-image: url(../images/discount1.jpg);
+   background-size: cover;
+   padding-left: 15px;
+   border-radius: 5px;
+   transition: .5s;
+}
+
+.item7{
+   background-image: url(../images/discount2.jpg);
+   background-size: cover;
+   padding-left: 15px;
+   border-radius: 5px;
+   transition:.5s;
+}
+
+.item6 h4,
+.item7 h4{
+   color: rgb(149, 188, 123);
+}
+
+.item6:hover,
+.item7:hover{
+   transform:scale(1.1);
+}
+
+.sprites {
+   display:flex;
+   margin-bottom: 55px;
+}
+.sprite-item{
+   flex:1;
+   text-align: center;
+   border-right: 1px solid rgb(134, 183, 101);
+   margin-top: 20px;
+}
+
+.sprite-item:last-child{
+   border-right: none;
+}
+
+.sprite-info h3{
+   font-size: 17px;
+}
+.sprite-info p{
+   color: rgb(134, 183, 101);
+   font-size: 15px;
+}
+.sprite-icon{
+   background-image: url(../images/service-icon.png);
+   height: 55px;
+   background-repeat: no-repeat;
+}
+.sprite-icon-1 {
+background-position: center 5px;
+transition: .5s;
+}
+.sprite-item:hover .sprite-icon-1 {
+   background-position: center -86px;
+}
+.sprite-icon-2{
+background-position: center -180px;
+transition:.5s;
+}
+.sprite-item:hover .sprite-icon-2{
+   background-position: center -273px;
+}
+.sprite-icon-3{
+background-position: center -366px;
+transition: .5s;
+}
+.sprite-item:hover .sprite-icon-3{
+   background-position: center -455px;
+}
+.sprite-icon-4{
+background-position: center -549px;
+transition:.5s;
+}
+.sprite-item:hover .sprite-icon-4{
+   background-position: center -639px;
+}
+.sprite-icon-5{
+background-position: center -734px;
+transition:.5s;
+}
+.sprite-item:hover .sprite-icon-5{
+   background-position: center -826px;
+}
+
+hr{
+   width: 85%;
+   margin: auto;
+}
+
+/*                   last-section            */
+
+.last-section{
+   width: 100%;
+   height: 100vh;
+}
+
+.head-sec3{
+   text-align: center;
+   margin:50px 0px;
+   font-size: 35px;
+}
+
+.cards{
+   width: 100%;
+}
+
+.container{
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+   gap: 40px;
+}
+
+.card{
+   width: 300px;
+   height: 430px;
+   position: relative;
+   transform-style: preserve-3d ;
+   transition: all 1s;
+}
+
+.front,.back{
+   width: 300px;
+   height: 400px;
+   position: absolute;
+}
+
+.front{
+   z-index: 1;
+   backface-visibility:hidden; 
+}
+
+.back{
+   transform: rotatey(180deg);
+   position: relative;
+}
+
+.overlay-front, .overlay-back{
+   width: 100%;
+   height: 80%;
+}
+
+.overlay-front img,.overlay-back img{
+   width: 100%;
+   height: 100%;
+}
+
+.info{
+   padding: 10px;
+}
+
+.info i{
+   color: gold;
+   margin-bottom: 10px;
+}
+.name-product {
+   font-size: 17px;
+   margin-bottom: 5px;
+}
+
+.price{
+   font-weight: bold;
+}
+
+.back .info{
+   visibility: hidden;
+}
+
+.back .icons{
+   width: 70%;
+   text-align: center;
+   border-radius: 10px;
+   position: absolute;
+   top:60%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+   background-color:  rgb(134, 183, 101);
+}
+
+.back .icons i{
+   font-size: 25px;
+   padding: 5px;
+}
+
+.card:hover{
+   transform:rotatey(180deg);
+}
+
+.card:hover .back .info{
+   visibility: visible;
+   transition: .5s step-end;
+}
