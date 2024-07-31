@@ -480,7 +480,7 @@ hr{
    top:60%;
    left: 50%;
    transform: translate(-50%,-50%);
-   background-color:  rgb(134, 183, 101);
+   background-color:  white;
 }
 
 .back .icons i{
